@@ -53,6 +53,9 @@ export default {
 </script>
 
 <style lang="stylus">
+@media screen and (max-width 800px)
+  html
+    font-size 14px
 a
   text-decoration none
 *
@@ -115,6 +118,11 @@ h1
   font-size 1.4rem
   margin 0
   font-weight 700
+@media screen and (max-width 800px)
+  .sidebar
+    display none
+  .page
+    padding-left 0!important
 .sidebar
   position fixed
   left 0
@@ -175,15 +183,22 @@ h1
     p
       font-size 1.35rem
     p:after
-      content '\3000'
+      display inline-flex
+      content ''
     p.translation:before
       content '\3000'
     p.translation
       font-size 1rem
       margin-top -1.2rem
+    ruby
+      line-height 1.15
+      display inline-flex
+      flex-direction column-reverse
+      align-items center
     rt
+      display inline
+      line-height 1
       font-size .9rem
-      margin-bottom -0.35rem
 .nav
   list-style none
   margin 0
