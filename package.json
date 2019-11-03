@@ -1,0 +1,21 @@
+{
+  "name": "uta",
+  "version": "1.0.0",
+  "description": "愛唄～since 2019～",
+  "main": "index.js",
+  "repository": "https://github.com/cool2645/uta.git",
+  "author": "rikakomoe",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "scripts": {
+    "start": "saber",
+    "build": "saber build"
+  },
+  "dependencies": {
+    "saber": "^0.10.4"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
+  }
+}
