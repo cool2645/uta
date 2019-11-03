@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="page">
-      <main>
+      <main class="serif">
         <slot name="default" />
       </main>
     </div>
@@ -67,6 +67,26 @@ body
   --item-hover-background-color: #fadfe746
   --icon-color: #b7b5bd
   --muted-color: #78757a
+.serif
+  font-family 'Source Han Serif JP Medium', 'Source Han Serif KR Medium', 'Source Han Sans CN Medium', 'Source Han Sans TW Medium', serif
+.serif .zh-Hans, .zh-Hans.serif
+  font-family 'Source Han Serif CN Medium', serif
+.serif .zh-Hant, .zh-Hant.serif
+  font-family 'Source Han Serif TW Medium', serif
+.serif .ja, .ja.serif
+  font-family 'Source Han Serif JP Medium', serif
+.serif .kr, .kr.serif
+  font-family 'Source Han Serif KR Medium', serif
+.sans-serif
+  font-family 'Source Han Sans JP Normal', 'Source Han Sans KR Normal', 'Source Han Sans CN Normal', 'Source Han Sans TW Normal', sans-serif
+.sans-serif .zh-Hans, .zh-Hans.sans-serif
+  font-family 'Source Han Sans CN Normal', sans-serif
+.sans-serif .zh-Hant, .zh-Hant.sans-serif
+  font-family 'Source Han Sans TW Normal', sans-serif
+.sans-serif .ja, .ja.sans-serif
+  font-family 'Source Han Sans JP Normal', sans-serif
+.sans-serif .kr, .kr.sans-serif
+  font-family 'Source Han Sans KR Normal', sans-serif
 </style>
 
 <style lang="stylus" scoped>
@@ -78,6 +98,8 @@ header
   height 4rem
   border-bottom 1px solid var(--border-color)
   color #000
+  z-index 2
+  background #fff
   a
     color #000
 .container
@@ -147,9 +169,21 @@ h1
     padding 1.5rem
     position relative
     h1
-      font-size 1.8rem
+      font-size 2rem
       border-bottom 1px solid var(--border-color)
       line-height 1.5
+    p
+      font-size 1.35rem
+    p:after
+      content '\3000'
+    p.translation:before
+      content '\3000'
+    p.translation
+      font-size 1rem
+      margin-top -1.2rem
+    rt
+      font-size .9rem
+      margin-bottom -0.35rem
 .nav
   list-style none
   margin 0
